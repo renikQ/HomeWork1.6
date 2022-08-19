@@ -7,8 +7,6 @@ public class Main {
         }
         return arr;
     }
-
-
     public static void main(String[] args) {
         int[] arr = generateRandomArray();
 
@@ -20,13 +18,13 @@ public class Main {
         System.out.println("Сумма трат за месяц составила " + sumExpensive + " рублей");
 
         // задание 2
-        int minExpensivePerDay = 200000;
+        int minExpensivePerDay = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < minExpensivePerDay) {
                 minExpensivePerDay = arr[i];
             }
         }
-        int maxExpensivePerDay = 0;
+        int maxExpensivePerDay = arr[0];
         for (int i1 = 0; i1 < arr.length; i1++) {
             if (arr[i1] > maxExpensivePerDay) {
                 maxExpensivePerDay = arr[i1];
@@ -42,10 +40,6 @@ public class Main {
         // Задание 4
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.println(reverseFullName[i]);
-                break;
-            }
             System.out.print(reverseFullName[i]);
         }
     }
